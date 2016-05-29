@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="DoubleScrollContainer">
+        <attr name="content_common_height" format="dimension" />
+        <attr name="content_top_height" format="dimension" />
+        <attr name="content_bottom_height" format="dimension" />
+    </declare-styleable>
+</resources>
