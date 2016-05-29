@@ -4,7 +4,6 @@
     android:layout_height="match_parent">
 
     <com.msile.android.views.DoubleScrollContainer
-        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -13,6 +12,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!--example1 start-->
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -48,8 +48,24 @@
                         android:textSize="25sp" />
                 </FrameLayout>
             </ScrollView>
+            <!--example1 end-->
+
+            <!--example2 start-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TopView is TextView"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="BottomView is TextView"
+                android:textSize="25sp" />
+            <!--example2 end-->
         </LinearLayout>
     </com.msile.android.views.DoubleScrollContainer>
-
 
 </RelativeLayout>

@@ -11,7 +11,7 @@ import android.widget.ScrollView;
 
 /**
  * 上下翻页 包含两个view视图
- *
+ * create 5/29 2016
  * @author msile
  */
 public class DoubleScrollContainer extends ScrollView {
