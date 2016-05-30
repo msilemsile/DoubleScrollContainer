@@ -20,10 +20,12 @@
 		android:layout_height="wrap_content"
 		android:orientation="vertical">
 
-		//add your TopView
+		//add your TopView !!(id 为 R.id.double_scroll_top_view )
 
-		//add your BottomView
+		//add your BottomView !!(id 为 R.id.double_scroll_bottom_view)
+		
+		//!!PS：如果topview或者bottomview是viewpager 请设置内部可滚动view id为 R.id.double_scroll_inner_scroll	
 
 	</LinearLayout>
 </com.msile.android.views.DoubleScrollContainer>
-```																					
+```								

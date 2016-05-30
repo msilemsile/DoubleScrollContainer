@@ -193,6 +193,9 @@ public class DoubleScrollContainer extends ScrollView {
                         viewPager.getCurrentItem());
                 mCurrentScrollView = item.getView().findViewById(R.id.double_scroll_inner_scroll);
             }
+            if (mCurrentScrollView != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && mCurrentScrollView.isNestedScrollingEnabled()) {
+                mCurrentScrollView.setNestedScrollingEnabled(false);
+            }
         } else {
             mCurrentScrollView = viewPager;
         }
@@ -204,6 +207,9 @@ public class DoubleScrollContainer extends ScrollView {
     public void setCurrentScrollView(View view) {
         this.mCurrentScrollView = view;
         hasFixedInnerScroll = true;
+        if (mCurrentScrollView != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && mCurrentScrollView.isNestedScrollingEnabled()) {
+            mCurrentScrollView.setNestedScrollingEnabled(false);
+        }
     }
 
     @Override
