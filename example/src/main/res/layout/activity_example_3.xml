@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.msile.android.views.DoubleScrollContainer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:content_bottom_offset="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--example3 start-->
+            <ScrollView
+                android:id="@id/double_scroll_top_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffff">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="800dp"
+                        android:gravity="center"
+                        android:text="TopView is ScrollView"
+                        android:textSize="25sp" />
+                </FrameLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/bottom_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="TAB1"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="TAB2"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="TAB3"
+                        android:textSize="20dp" />
+                </LinearLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@id/double_scroll_bottom_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!--example3 end-->
+        </LinearLayout>
+    </com.msile.android.views.DoubleScrollContainer>
+
+</RelativeLayout>

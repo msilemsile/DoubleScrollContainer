@@ -14,6 +14,7 @@
 
             <!--example1 start-->
             <ScrollView
+                android:id="@id/double_scroll_top_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -32,6 +33,7 @@
             </ScrollView>
 
             <ScrollView
+                android:id="@id/double_scroll_bottom_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -51,19 +53,21 @@
             <!--example1 end-->
 
             <!--example2 start-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="TopView is TextView"
-                android:textSize="25sp" />
+            <!--<TextView-->
+                <!--android:id="@id/double_scroll_top_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:text="TopView is TextView"-->
+                <!--android:textSize="25sp" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="BottomView is TextView"
-                android:textSize="25sp" />
+            <!--<TextView-->
+                <!--android:id="@id/double_scroll_bottom_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:text="BottomView is TextView"-->
+                <!--android:textSize="25sp" />-->
             <!--example2 end-->
         </LinearLayout>
     </com.msile.android.views.DoubleScrollContainer>

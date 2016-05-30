@@ -5,10 +5,10 @@
 ![Image](https://raw.githubusercontent.com/msilemsile/DoubleScrollContainer/master/example2.gif)  
 
 上下都为可滑动view  
-![Image](https://raw.githubusercontent.com/msilemsile/DoubleScrollContainer/master/example1.gif)
+![Image](https://raw.githubusercontent.com/msilemsile/DoubleScrollContainer/master/example1.gif)  
 
-//todo  
-view为ViewPager时,.....
+上为滑动view 下为viewpager  
+![Image](https://raw.githubusercontent.com/msilemsile/DoubleScrollContainer/master/example3.gif)
 
 ```
 <com.msile.android.views.DoubleScrollContainer
