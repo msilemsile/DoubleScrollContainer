@@ -36,7 +36,6 @@ public class DoubleScrollContainer extends ScrollView {
     private DoubleScrollListener listener;
     private boolean canPullUp, canPullDown;                 //是否可以上拉、下拉
     private float yDown;                                    //触摸Y轴坐标
-    private boolean hasFixedInnerScroll;
 
     public DoubleScrollContainer(Context context) {
         this(context, null);
@@ -130,9 +129,7 @@ public class DoubleScrollContainer extends ScrollView {
                     float yDistance = ev.getY() - yDown;
                     if (yDistance > 0) {
                         if (mScrollState == SCROLL_BOTTOM_VIEW) {
-                            if (!hasFixedInnerScroll) {
-                                getInnerScrollView(mScrollBottomView);
-                            }
+                            getInnerScrollView(mScrollBottomView);
                             if (mCurrentScrollView != null && !mCurrentScrollView.canScrollVertically(-1)) {
                                 canPullDown = true;
                                 canPullUp = false;
@@ -145,9 +142,7 @@ public class DoubleScrollContainer extends ScrollView {
                         }
                     } else {
                         if (mScrollState == SCROLL_TOP_VIEW) {
-                            if (!hasFixedInnerScroll) {
-                                getInnerScrollView(mScrollTopView);
-                            }
+                            getInnerScrollView(mScrollTopView);
                             if (mCurrentScrollView != null && !mCurrentScrollView.canScrollVertically(1)) {
                                 canPullUp = true;
                                 canPullDown = false;
@@ -182,31 +177,13 @@ public class DoubleScrollContainer extends ScrollView {
     private void getViewPagerInnerScroll(ViewPager viewPager) {
         PagerAdapter adapter = viewPager.getAdapter();
         if (adapter != null) {
-            if (adapter instanceof FragmentPagerAdapter) {
-                FragmentPagerAdapter pagerAdapter = (FragmentPagerAdapter) adapter;
-                Fragment item = (Fragment) pagerAdapter.instantiateItem(viewPager,
-                        viewPager.getCurrentItem());
+            if (adapter instanceof FragmentPagerAdapter || adapter instanceof FragmentStatePagerAdapter) {
+                Fragment item = (Fragment) adapter.instantiateItem(viewPager, viewPager.getCurrentItem());
                 mCurrentScrollView = item.getView().findViewById(R.id.double_scroll_inner_scroll);
-            } else if (adapter instanceof FragmentStatePagerAdapter) {
-                FragmentStatePagerAdapter statePagerAdapter = (FragmentStatePagerAdapter) adapter;
-                Fragment item = (Fragment) statePagerAdapter.instantiateItem(viewPager,
-                        viewPager.getCurrentItem());
-                mCurrentScrollView = item.getView().findViewById(R.id.double_scroll_inner_scroll);
-            }
-            if (mCurrentScrollView != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && mCurrentScrollView.isNestedScrollingEnabled()) {
-                mCurrentScrollView.setNestedScrollingEnabled(false);
             }
         } else {
             mCurrentScrollView = viewPager;
         }
-    }
-
-    /**
-     * 设置当前滚动视图
-     */
-    public void setCurrentScrollView(View view) {
-        this.mCurrentScrollView = view;
-        hasFixedInnerScroll = true;
         if (mCurrentScrollView != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && mCurrentScrollView.isNestedScrollingEnabled()) {
             mCurrentScrollView.setNestedScrollingEnabled(false);
         }

@@ -3,5 +3,4 @@
     <item name="double_scroll_inner_scroll" type="id" />
     <item name="double_scroll_top_view" type="id" />
     <item name="double_scroll_bottom_view" type="id" />
-
 </resources>
