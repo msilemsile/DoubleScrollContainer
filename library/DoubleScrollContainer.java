@@ -1,4 +1,4 @@
-package com.msile.android.views;
+package com.msile.android.doublescrollcontainer;
 
 import android.content.Context;
 import android.content.res.TypedArray;

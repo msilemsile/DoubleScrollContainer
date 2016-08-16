@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.msile.android.views.DoubleScrollContainer
+    <com.msile.android.doublescrollcontainer.DoubleScrollContainer
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:content_bottom_offset="50dp">
@@ -77,6 +77,6 @@
 
             <!--example3 end-->
         </LinearLayout>
-    </com.msile.android.views.DoubleScrollContainer>
+    </com.msile.android.doublescrollcontainer.DoubleScrollContainer>
 
 </RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DoubleScrollContainer">
+        <attr name="content_common_height" format="dimension" />
+        <attr name="content_top_height" format="dimension" />
+        <attr name="content_top_offset" format="dimension" />
+        <attr name="content_bottom_height" format="dimension" />
+        <attr name="content_bottom_offset" format="dimension" />
+        <attr name="scroll_next_height" format="dimension" />
+    </declare-styleable>
+</resources>
