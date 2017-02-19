@@ -1,5 +1,6 @@
 # DoubleScrollContainer
-@Deprecated see https://github.com/msilemsile/MultiScrollContainer)
+@Deprecated see https://github.com/msilemsile/MultiScrollContainer
+
 包含两个view视图，上下翻页~
 
 上下都为普通view  
